@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:ticket_booking_yt/utils/app_styles.dart";
+import "package:gap/gap.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,14 +14,16 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             child: Column(
               children: [
+                const Gap(50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text("Good morning"),
-                          Text("Book tickets")
+                        children: [
+                          Text("Good morning", style: Styles.headlineStyle3),
+                          const Gap(5),
+                          Text("Book tickets", style: Styles.headlineStyle)
                         ]),
                     Container(
                         height: 20,

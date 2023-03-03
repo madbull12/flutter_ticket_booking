@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:ticket_booking_yt/utils/app_styles.dart";
 import "package:gap/gap.dart";
+import "package:fluentui_icons/fluentui_icons.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,6 +36,35 @@ class HomeScreen extends StatelessWidget {
                                 image: AssetImage("images/travel.png")))),
                   ],
                 ),
+                const Gap(25),
+                Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color(0xFFF4F6FD)),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 12),
+                    child: Row(
+                      children: [
+                        const Icon(FluentSystemIcons.ic_fluent_search_regular,
+                            color: Color(0xFFBFC205)),
+                        Text("Search", style: Styles.headlineStyle4)
+                      ],
+                    )),
+                const Gap(40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Flights",
+                      style: Styles.headlineStyle2,
+                    ),
+                    Text(
+                      "View all",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    )
+                  ],
+                )
               ],
             )),
       ]),
